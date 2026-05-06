@@ -129,7 +129,7 @@ export default function ChatInterface({
       {/* Input Area */}
       <div className="p-6 border-t border-white/5 bg-[#030307]/50 backdrop-blur-3xl">
         <form onSubmit={handleSubmit} className="relative flex items-center group">
-          <div className="absolute inset-0 bg-cyan-500/5 rounded-2xl blur-xl opacity-0 group-focus-within:opacity-100 transition-opacity" />
+          <div className="absolute inset-0 bg-cyan-500/5 rounded-2xl blur-xl opacity-0 group-focus-within:opacity-100 transition-opacity pointer-events-none" />
           
           <button
             type="button"
@@ -146,8 +146,9 @@ export default function ChatInterface({
           <input
             value={input}
             onChange={(e) => setInput(e.target.value)}
+            autoFocus
             placeholder={isListening ? "Listening to delegate..." : "Command Mercury..."}
-            className="w-full bg-white/[0.03] border border-white/5 rounded-2xl pl-6 pr-28 py-4 text-sm focus:outline-none focus:border-cyan-500/30 transition-all placeholder:text-slate-600 text-slate-200"
+            className="w-full bg-white/[0.03] border border-white/5 rounded-2xl pl-6 pr-28 py-4 text-sm focus:outline-none focus:border-cyan-500/30 transition-all placeholder:text-slate-600 text-slate-200 relative z-20"
           />
           
           <button
