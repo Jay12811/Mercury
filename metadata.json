@@ -1,6 +1,6 @@
 {
-  "name": "Mercury: Elite MUN Sidekick",
-  "description": "A real-time AI mentor for Model UN delegates, providing tactics, speech drafts, and ROP quick-ref in a sleek sidebar.",
+  "name": "MERCURY",
+  "description": "Elite AI strategy unit for MUN delegates. Real-time tactics, speech Drafting, and ROP decoding.",
   "requestFramePermissions": ["microphone"],
   "majorCapabilities": ["AI-powered MUN mentoring", "Real-time speech drafting", "ROP assistance"]
 }
