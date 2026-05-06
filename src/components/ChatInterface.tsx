@@ -134,7 +134,7 @@ export default function ChatInterface({
           <button
             type="button"
             onClick={() => setIsListening(!isListening)}
-            className={`p-3 rounded-full transition-all absolute right-16 z-10 ${
+            className={`p-3 rounded-full transition-all absolute right-16 z-30 ${
               isListening 
                 ? 'bg-red-500 text-white animate-pulse shadow-[0_0_20px_rgba(239,68,68,0.4)]' 
                 : 'text-slate-500 hover:text-cyan-400'
@@ -154,7 +154,7 @@ export default function ChatInterface({
           <button
             type="submit"
             disabled={!input.trim()}
-            className="absolute right-3 p-2.5 bg-cyan-600 hover:bg-cyan-500 disabled:opacity-20 disabled:bg-slate-800 text-white rounded-xl transition-all shadow-lg shadow-cyan-950/40"
+            className="absolute right-3 z-30 p-2.5 bg-cyan-600 hover:bg-cyan-500 disabled:opacity-20 disabled:bg-slate-800 text-white rounded-xl transition-all shadow-lg shadow-cyan-950/40"
           >
             <Send size={16} />
           </button>
