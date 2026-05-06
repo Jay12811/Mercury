@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-mercury-bg: #030307;
+  --color-mercury-card: #0A0A0F;
+  --color-mercury-cyan: #22D3EE;
+  --color-mercury-accent: #38bdf8;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-[#030307] text-slate-100 font-sans selection:bg-cyan-500/30 overflow-hidden;
+  }
+}
+
+@keyframes neural-pulse {
+  0%, 100% { opacity: 0.3; transform: scale(0.95); }
+  50% { opacity: 0.6; transform: scale(1); }
+}
+
+.animate-neural-pulse {
+  animation: neural-pulse 4s ease-in-out infinite;
+}
+
+.glass-morphism {
+  @apply bg-white/[0.03] backdrop-blur-2xl border border-white/10 shadow-[inner_0_1px_1px_rgba(255,255,255,0.05)];
+}
+
+.technical-card {
+  @apply bg-cyan-500/[0.02] border border-cyan-500/20 shadow-[0_0_30px_rgba(34,211,238,0.05)];
+}
+
+.markdown-body ul {
+  @apply list-disc list-inside mb-4 space-y-1.5;
+}
+
+.markdown-body p {
+  @apply mb-3 leading-relaxed text-slate-300;
+}
+
+.markdown-body b, .markdown-body strong {
+  @apply text-cyan-400 font-semibold tracking-tight;
+}
+
+/* Custom Scrollbar for a technical look */
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-white/10 rounded-full hover:bg-white/20 transition-colors;
+}
